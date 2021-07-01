@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="header">
+    <h1>weather API</h1>
+    <div class="search">
+      <input type="text" placeholder="Enter City Name..." class="citySelect">
+      <button id="searchBtn">GO</button>
+    </div>
+  </div>
+  <div id="main">
+    <div id="content">
+      <h1 class="city"></h1>
+      <div class="temp-container">
+        <h2 class="temp">
+          </h1>
+          <div class="switch-container">
+            <div class="switch-btn" onclick="this.classList.toggle('active'); getWeather();">
+              <div class="inner-circle"></div>
+            </div>
+
+          </div>
+      </div>
+      <h2 class="weather"></h2>
+      <div class="image-container">
+      </div>
+    </div>
+    <div id="chart">
+      <canvas id="myChart"></canvas>
+
+
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
